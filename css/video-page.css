@@ -1,0 +1,250 @@
+header,
+nav {
+    background-color: #19171A;
+    color: #959794;
+}
+
+.video-banner {
+    width: 100%;
+    height: 550px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'topbar topbar topbar topbar topbar'
+        'menue section1 section1 section1 section1'
+        'menue section2 section2 section2 section2'
+        'menue section3 section3 section3 section3'
+        'menue section4 section4 section4 section4';
+    grid-gap: 5px;
+    padding: 5px;
+
+}
+
+.video-banner {
+    grid-area: topbar;
+    display: flex;
+}
+
+.left-panel {
+    grid-area: menue;
+    margin-top: 20px;
+    margin-right: 20x;
+
+}
+
+.right-section1,rightsection1 {
+    grid-area: section1;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+
+.right-section2,rightsection2 {
+    grid-area: section2;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+
+.right-section3,rightsection3 {
+    grid-area: section3;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+
+.right-section4,rightsection4 {
+    grid-area: section4;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.row,
+.row1 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.video-card {
+
+    width: 25%;
+    float: right;
+    height: 250px;
+}
+
+.video-card1 {
+
+    width: 20%;
+    float: right;
+    height: 270px;
+}
+.video-card2{
+    width: 33%;
+    float: right;
+    height: 270px;
+}
+.video-card1 img:hover,.video-card2 img:hover{
+    background-color: black;
+    opacity: 0.2;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.column,
+.column1 {
+
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+}
+
+.column1 {
+    height: 220px;
+}
+
+.video-card img {
+    width: 80%;
+    height: 80%;
+}
+
+.video-label {
+    padding-left: 15px;
+    font-weight: 600;
+    font-family: Cremona;
+}
+
+.section-title {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-weight: 700;
+    font-family: Azonix;
+    font-size: 20px;
+    color: #959794;
+}
+
+label::after {
+    position: absolute;
+    content: "";
+    background: #d43031;
+    height: 2px;
+    width: 110px;
+    margin-top: 30px;
+    margin-left: -140px;
+
+}
+
+.icon-panel {
+    margin-top: 70%;
+    text-align: center;
+}
+
+.left-panel i {
+    margin: 15px;
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.icon-panel div {
+    text-align: center;
+    font-family: Cremona;
+}
+
+@media only screen and (max-width : 800px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'section1'
+            'section2'
+            'section3'
+            'section4';
+        grid-gap: 5px;
+        padding: 5px;
+
+    }
+
+    .video-banner {
+        display: none;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-section1 {
+        display: block;
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .right-section2 {
+        display: block;
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .right-section3 {
+        display: block;
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .right-section4 {
+        display: block;
+        width: 80%;
+        margin: auto;
+
+    }
+    .rightsection1,.rightsection2,.rightsection3,.rightsection4{
+    display: inline-block;
+    margin: 25px;
+    }
+
+    .row1 {
+        text-align: center;
+    }
+
+    .video-card {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    .video-card2{
+        display: block;
+        width: 100%;
+        margin: auto;        
+    }
+
+    .video-card1 {
+        display: inline-block;
+    width: 50%;
+    float: left;
+  align-items: center;
+    }
+
+    .audio-section{
+        text-align: center  ;
+    }
+    .column,
+    .column1 {
+        padding: 0px;
+        width: auto;
+    }
+
+    .section-title {
+        text-align: center;
+        display: block;
+        margin-bottom: 40px;
+    }
+    
+/*
+    .game {
+        width: 220px;
+    }
+*/
+}

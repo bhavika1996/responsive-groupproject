@@ -1,0 +1,339 @@
+main {
+    grid-column: 1/-1;
+}
+
+/* @font-face {
+    font-family: Cremona;
+    src: url(../fonts/Cremona.otf);
+} */
+
+#album-information {
+
+    font-family: Cremona;
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    margin: auto;
+}
+
+.album-logo {
+    margin: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.detail {
+
+    margin-top: 80px;
+    margin-left: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: auto;
+    height: 120px;
+
+}
+
+.detail-title {
+    font-size: 20px;
+    color: #E9322E;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px black;
+}
+
+.detail-value {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+
+}
+
+#album-content {
+
+    font-family: Cremona;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.play-all button {
+
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #E9322E;
+    border-radius: 10px;
+    color: #919191;
+    font-size: 15px;
+
+}
+
+#album-content table {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 20px;
+}
+
+
+tr th:first-child {
+    border-top-left-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+th,
+td {
+    padding: 10px;
+    width: 22.2%;
+}
+
+tr th:first-child,
+tr td:first-child {
+    width: 10%;
+}
+
+thead tr {
+    background-color: #919191;
+    color: #19171A;
+}
+
+tbody tr,
+thead tr {
+
+    border-bottom: 0.5px solid #3c3b3dbd;
+}
+
+tbody tr:hover {
+
+    background-color: #3c3b3dbd;
+}
+
+tr td .fa:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-family: Cremona;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-top: 50px;
+}
+
+#suggestions {
+
+    font-family: Cremona;
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+
+#suggestions img {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.suggestion-title {
+    display: block;
+}
+
+#suggestions .button {
+
+    margin-top: 50%;
+}
+
+#suggestions .button:hover {
+
+    opacity: 0.8;
+}
+
+#suggestions .button:active {
+
+    box-shadow: 2px 1px 5px #E9322E;
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    /* Album Header */
+    #album-information {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .detail {
+        display: block;
+        margin: 0;
+        height: auto;
+    }
+
+
+    .detail-title::after {
+        content: ":";
+    }
+
+    .detail-value {
+        display: inline;
+    }
+
+    /* Album table */
+
+    table {
+        border: 0;
+        margin: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    tr,
+    td,
+    th {
+        border: none;
+    }
+
+    table tr {
+        border-bottom: 3px solid #3c3b3dbd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #3c3b3dbd;
+        display: block;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    tbody tr td:first-child {
+        display: none;
+    }
+
+    tr td {
+        text-align: left;
+        width: auto;
+    }
+
+    tr {
+        border: 1px solid #3c3b3dbd;
+    }
+
+    table td:nth-child(2) {
+        border: 2px solid #3c3b3dbd;
+        color: #19171A;
+        background-color: #919191;
+
+    }
+
+    table td:nth-child(5) {
+        text-align: left;
+    }
+
+
+    table td:before {
+        padding-left: 50px;
+    }
+
+    table td:nth-child(5):before {
+        /* padding-left: 95px; */
+    }
+
+    table td:nth-child(2)::before {
+
+        text-align: center;
+        content: "Song Title: ";
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+
+    table td:nth-child(2)::before {
+
+        text-align: center;
+        content: "Song Title: ";
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+
+    table td:nth-child(4)::before {
+
+        text-align: center;
+        content: "Duration: ";
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+
+    table td:nth-child(3)::before {
+
+        text-align: center;
+        content: "Artist:";
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+
+    table td:nth-child(5)::before {
+
+        text-align: center;
+        content: "Download Track:";
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+
+    }
+
+    #suggestions img {
+        height: 160px;
+        width: 160px;
+        margin: 20px;
+    }
+
+    #suggestions .button {
+        margin: 0;
+        margin-top: 38%;
+    }
+
+
+}

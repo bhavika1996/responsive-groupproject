@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+}
+@font-face{
+    font-family:Cremona;
+    src: url(../fonts/Cremona.otf);
+}
+
+body {
+    background-color: #19171A;
+    color: #A2A4A2;
+    margin: 10px 0 0 0;
+}
+
+header {
+    grid-area: header;
+}
+
+.logo {
+    height: 80px;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1, 1.1);
+}
+
+nav {
+    float: right;
+    grid-area: nav;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 25px;
+}
+
+/*Detail Style*/
+.seperator {
+    margin-top: 5%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    font-family: Cremona;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.menu img {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.menu:hover {
+    opacity: 0.5;
+}
+
+.other img {
+    width: 70px;
+    height: auto;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+#game-name {
+    color: red;
+}
+
+.suggestion ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.suggestion li {
+    margin-bottom: 2%;
+}
+
+.suggestion li a{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.suggestion li img {
+    width: 100px;
+    height: 100px;
+}
+
+.suggestion li span {
+    margin-left: 2%;
+}
+
+.suggestion ul::-webkit-scrollbar {
+    width: 1px;
+}
+ 
+.suggestion ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.suggestion ul::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.suggestion ul:hover::-webkit-scrollbar-thumb {
+    background-color: red;
+    outline: 1px solid slategrey;
+}
+
+.suggestion li:hover {
+    background-color: #3c3b3dbd;
+}
+
+h4 {
+    padding-left: 15px;
+}
+
+.descrption {
+    margin-bottom: 10%;
+}
+
+.descrption label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descrption span{
+    margin-left: 3%;
+    font-size: 16px;
+}
+
+.descrption i{
+    margin: 0;
+    font-size: 30px;
+}
+
+.requirements h5 {
+    font-size: 16px;
+}
+
+h3{
+    display: inline;
+}
+
+.active {
+    color: red;
+}
+
+.web-review {
+    margin-top: 10%;
+}
+
+.reviews {
+	height: 40%;
+	overflow-y: scroll;
+}
+
+.reviews div {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.reviews i {
+    font-size: 30px;
+    margin-right: 5%;
+}
+
+.reviews::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.reviews::-webkit-scrollbar {
+	width: 1px;
+}
+
+.reviews::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.reviews:hover::-webkit-scrollbar-thumb {
+    background-color: red;
+    outline: 1px solid slategrey;
+}
+
+hr {
+    border: 2px solid #3c3b3dbd;
+    margin-bottom: 5%;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size:28px;
+}
+
+#return-to-top:hover {
+    background: #E9322E;
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+.mobile-review {
+    display: none;
+}
+
+/*************** footer CSS**********************/
+footer{
+    text-align: center;
+    background-color: #2a292b;
+    display: inline-block;
+    width: -webkit-fill-available;
+}
+
+.contact-details{
+    
+}
+.contact-details lable{
+    font-family: Azonix;
+}
+a {
+    text-decoration: none;
+    color: #A2A4A2;
+}
+footer hr {
+    width: 90%;
+    border: 0.8px solid #A2A4A2;
+}
+.available-icons{
+    
+}
+.available-icons lable{
+    width: 100%;
+    font-family: Azonix;
+}
+.available-icons i{
+    margin: 15px;
+    font-size: 22px;
+}
+
+footer .center{
+    padding-left: 160px;
+}
+.social-icons{
+    
+}
+.social-icons lable{
+    width: 80%;
+    font-family: Azonix;
+}
+.icons {
+    text-align: center;
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+.social-icons i{
+    margin: 15px;
+    font-size: 22px;
+}
+.copyright {
+    height: 20px;
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    background-color: #A2A4A2;
+    color: #19171A;
+}
+
+#copyright {
+    text-align: center;
+}
+
+.copyright p {
+    padding-left: 10px;
+}
+
+.footer-mobile {
+    display: none;
+}
+i.fa-facebook:hover{
+    color: #2e4ccf;
+    cursor: pointer;
+}
+i.fa-pinterest:hover{
+    color: #f90714;
+    cursor: pointer;
+}
+i.fa-twitter:hover{
+    color: #07cff9;
+    cursor: pointer;
+}
+i.fa-instagram:hover{
+    color: #f98907;
+    cursor: pointer;
+}
+i.fa-apple:hover{
+    color: white;
+    cursor: pointer;
+}
+i.fa-google-play:hover{
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        display: contents;
+    }
+
+    .tab {
+        display: block;
+        text-align: center;
+    }
+    .dropdown {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        position: inherit;
+    }
+    .col-4 {
+        width: 40%;
+        margin: 5%
+    }
+    
+    .col-3 {
+        width: 45%;;
+    }
+    
+    .mostly {
+        display: none;
+    }
+    
+    .col-1 {
+        width: 0%;
+    }
+    
+    .menu img {
+        width: 300px;
+        height: 400px;
+    }
+    
+    .seperator {
+        margin-top: 0;
+    }
+    
+    .other img {
+        width: 106px;
+        margin: 5%;
+    }
+    
+    .web-review {
+        display: none;
+    }
+    
+    .mobile-review {
+        display: block;
+    }
+    
+    .mobile-review div{
+        margin-left: 5%;
+    }
+    
+    .footer-mobile {
+        display: block;
+    }
+    
+    .footer-web {
+        display: none;
+    }
+    
+    .col-12 {
+        padding: 0;
+    }
+    
+    .contact-details{
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0px;
+        margin-top: 20px;
+    }
+    .contact-details lable{
+        margin-bottom: 5px;
+    }
+    .contact-details p {
+        margin: 7px;
+    }
+    .social-icons{
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0px;
+        margin-top: 30px;
+    }
+    .icons{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .social-icons lable{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    .available-icons{
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0px;
+        padding-top: 15px;
+    }
+}

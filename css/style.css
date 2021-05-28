@@ -1,0 +1,606 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Azonix;
+    src: url(../fonts/Azonix.otf);
+}
+
+@font-face {
+    font-family: Cremona;
+    src: url(../fonts/Cremona.otf);
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "header nav"
+        "main main"
+        "section section"
+        "footer footer";
+    background-color: #19171A;
+    color: #A2A4A2;
+    margin: 10px 0 0 0;
+}
+
+header {
+    grid-area: header;
+}
+
+.logo {
+    height: 80px;
+    margin-left: 20px;
+}
+
+.logo:hover {
+    transform: scale(1.1, 1.1);
+}
+
+nav {
+    grid-area: nav;
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.tab {
+    margin: 15px;
+    padding: 20px;
+    font-family: Azonix;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #A2A4A2;
+}
+
+.tab:hover,
+.flink:hover {
+    background-color: #E9322E;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+i {
+    color: #A2A4A2;
+    font-size: 40px;
+    margin: 25px;
+    text-shadow: 2px 2px 7px #000;
+}
+
+/*Drop down*/
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 5px;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 20px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: Azonix;
+    margin: 0px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+    color: #E9322E;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover i {
+    color: #E9322E;
+}
+
+main {
+    grid-area: main;
+    display: inline-flex;
+}
+
+main p {
+    width: 50%;
+    word-wrap: break-word;
+    font-family: Azonix;
+    align-self: center;
+    text-align: center;
+}
+
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 28px;
+}
+
+#return-to-top:hover {
+    background: #E9322E;
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+
+
+
+
+
+
+/*text in banner*/
+
+.bannertext,
+.walltext {
+    font-size: 24px;
+}
+
+.bannertext a {
+    font-size: 40px;
+    color: #A2A4A2;
+    animation-name: bannertext;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.bannertext span,
+.bannertext a {
+    display: block;
+    margin-top: 10px;
+}
+
+.bannertext span:nth-of-type(even) {
+    margin-top: 50px;
+}
+
+@keyframes bannertext {
+    from {
+        color: #A2A4A2;
+    }
+
+    to {
+        color: #E9322E;
+    }
+}
+
+.bannerimg {
+    width: 50%;
+}
+
+/*************** footer CSS**********************/
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: 60px;
+    background-color: #2a292b;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-details {
+    float: left;
+    width: 30%;
+    margin: 20px 0px 0px 180px;
+
+}
+
+.contact-details lable {
+    font-family: Azonix;
+}
+
+a {
+    text-decoration: none;
+    color: #A2A4A2;
+}
+
+footer hr {
+    width: 90%;
+    border: 0.8px solid #A2A4A2;
+}
+
+.available-icons {
+    float: left;
+    margin: 20px 0px 30px 50px;
+}
+
+.available-icons lable {
+    float: right;
+    width: 100%;
+    font-family: Azonix;
+}
+
+.available-icons i {
+    margin: 15px;
+    font-size: 22px;
+}
+
+.download-icons {}
+
+footer .center {
+    padding-left: 160px;
+}
+
+.social-icons {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.social-icons lable {
+    float: right;
+    width: 80%;
+    font-family: Azonix;
+}
+
+.icons {
+    text-align: center;
+    float: right;
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+
+.social-icons i {
+    margin: 15px;
+    font-size: 22px;
+}
+
+.copyright {
+    height: 20px;
+    width: 100%;
+    font-size: 15px;
+    text-align: left;
+    background-color: #A2A4A2;
+    color: #19171A;
+}
+
+#copyright {
+    text-align: center;
+}
+
+.copyright p {
+    padding-left: 10px;
+}
+
+i.fa-facebook:hover {
+    color: #2e4ccf;
+    cursor: pointer;
+}
+
+i.fa-pinterest:hover {
+    color: #f90714;
+    cursor: pointer;
+}
+
+i.fa-twitter:hover {
+    color: #07cff9;
+    cursor: pointer;
+}
+
+i.fa-instagram:hover {
+    color: #f98907;
+    cursor: pointer;
+}
+
+i.fa-apple:hover {
+    color: white;
+    cursor: pointer;
+}
+
+i.fa-google-play:hover {
+    color: white;
+    cursor: pointer;
+}
+
+
+/*section*/
+section {
+    grid-area: section;
+    text-align: center;
+}
+
+h3 {
+    display: block;
+    text-align: center;
+    font-family: Azonix;
+}
+
+.image,
+.gameimage,
+.videoimage,
+.wallpaper {
+    width: 247px;
+    height: auto;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding: 3px;
+}
+
+.album {
+    display: inline-flex;
+    padding: 3px;
+}
+
+.button {
+    background-color: #E9322E;
+    color: white;
+    font-size: 15px;
+    padding: 15px 32px;
+    border-radius: 10px;
+    font-family: Azonix;
+    border: none;
+    margin: 0px 30px;
+    cursor: pointer;
+
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    text-align: center;
+    bottom: 50%;
+}
+
+.album1:hover .image {
+    opacity: 0.3;
+}
+
+.album1:hover .middle {
+    opacity: 1;
+}
+
+/*games*/
+.album1:hover .gameimage {
+    opacity: 0.3;
+}
+
+.gameimage {
+    width: 410px;
+}
+
+/*video*/
+.videoimage {
+    width: 615px;
+    padding: 15px;
+}
+
+.album1:hover .videoimage {
+    opacity: 0.2;
+}
+
+.fanworld i {
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.fanworld {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-family: Azonix;
+    flex-wrap: wrap;
+}
+
+.fan {
+    margin: 25px 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+#fan {
+    padding: 20px;
+}
+
+/*wallpaper*/
+.wallpaper {
+    height: 300px;
+}
+
+.album1:hover .wallpaper {
+    opacity: 0.2;
+}
+
+/*wallpaper.html*/
+.wall-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px;
+}
+
+.wall-column img:hover {
+    background-color: black;
+    opacity: 0.2;
+}
+
+.wall-column {
+    flex: 20%;
+    max-width: 20%;
+    padding: 5px 5px;
+}
+
+.wall-column img {
+    vertical-align: middle;
+    width: 100%;
+    margin: 5px;
+}
+
+.walltext {
+    padding-left: 37%;
+    text-align: center;
+}
+
+.mobile-view {
+    display: none;
+}
+
+/*media query*/
+@media only screen and (max-width: 800px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "section"
+            "footer";
+    }
+
+    nav {
+        display: block;
+    }
+
+    .tab {
+        display: block;
+        text-align: center;
+    }
+
+    main {
+        display: block;
+        align-items: center;
+    }
+
+    main p {
+        width: auto;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image,
+    .wallpaper {
+        width: 258px;
+    }
+    .album{
+        flex-wrap: wrap;
+    }
+    .videoimage,
+    .gameimage {
+        width: 100%;
+        height: auto;
+    }
+
+    .dropdown {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        position: inherit;
+    }
+
+    .bannerimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .wall-column {
+        max-width: 100%;
+    }
+
+    .wall-column img {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .wall-row {
+        display: inline;
+    }
+
+    .contact-details {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0px;
+        margin-top: 20px;
+
+    }
+
+    .contact-details lable {
+        margin-bottom: 5px;
+    }
+
+    .contact-details p {
+        margin: 7px;
+    }
+
+    .social-icons {
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0px;
+        margin-top: 30px;
+    }
+
+    .icons {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    .social-icons lable {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    .available-icons {
+        padding-top: 15px;
+        display: block;
+        width: 100%;
+        float: none;
+        margin: 0px;
+    }
+    
+    .mobile-view {
+        display: block;
+    }
+    
+    .web-view {
+        display: none;
+    }
+}
